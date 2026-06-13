@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Académico Profesional | Juan Fernando Pástor</title>
+    <meta name="description"
+        content="Repositorio centralizado para documentar, estructurar y rastrear mi progreso técnico, proyectos académicos y aplicación de estándares de desarrollo. Ingeniería en Sistemas - UEES.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            // Cambiamos a una paleta Dark Tech basada en Negro Puro y Rojo Crimson
+                            darkBg: '#050505',       // Fondo negro profundo absoluto
+                            darkCard: '#121214',     // Tarjetas gris oscuro premium
+                            darkBorder: '#26262b',   // Bordes sutiles
+                            redNeon: '#ff2a3b',      // Rojo brillante de acento
+                            redHover: '#e01626',     // Rojo para estados hover
+                            pureWhite: '#ffffff'     // Blanco puro para textos principales
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ajustes de scrollbar estilo Cyber-Red */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #26262b;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2a3b;
+        }
+
+        /* Efecto de resplandor Rojo sutil en modo oscuro */
+        .dark .glow-red {
+            box-shadow: 0 0 20px rgba(255, 42, 59, 0.15);
+        }
+
+        /* Borde dinámico para las tarjetas de proyectos */
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #ff2a3b !important;
+            box-shadow: 0 10px 30px rgba(255, 42, 59, 0.15);
+        }
+
+        /* Ambient light mode bg accent */
+        .light-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 42, 59, 0.06) 0%, rgba(139, 92, 246, 0.02) 50%, transparent 100%);
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Ambient dark mode bg accent */
+        .dark-tech-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 42, 59, 0.08) 0%, transparent 80%);
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(16px) saturate(120%);
+            -webkit-backdrop-filter: blur(16px) saturate(120%);
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-zinc-50 dark:bg-brand-darkBg text-zinc-800 dark:text-zinc-100 transition-colors duration-300">
+
+    <!-- Background Ambient Glows -->
+    <div class="hidden dark:block">
+        <div class="dark-tech-glow top-12 left-10"></div>
+        <div class="dark-tech-glow top-1/2 right-10"
+            style="background: radial-gradient(circle, rgba(255, 42, 59, 0.05) 0%, transparent 70%);"></div>
+        <div class="dark-tech-glow bottom-10 left-1/4"
+            style="background: radial-gradient(circle, rgba(255, 42, 59, 0.06) 0%, transparent 80%);"></div>
+    </div>
+    <div class="block dark:hidden">
+        <div class="light-glow top-12 left-10"></div>
+        <div class="light-glow top-1/2 right-10"
+            style="background: radial-gradient(circle, rgba(255, 42, 59, 0.03) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="min-h-screen flex flex-col justify-between">
+
+        <!-- Header / Navigation -->
+        <header
+            class="sticky top-0 z-50 glass-panel bg-white/70 dark:bg-brand-darkBg/70 border-b border-zinc-200/50 dark:border-brand-darkBorder px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-redNeon to-red-500 flex items-center justify-center font-outfit font-extrabold text-white text-lg tracking-wider shadow-lg shadow-red-500/20 group-hover:scale-105 transition-transform">
+                        JP
+                    </div>
+                    <div>
+                        <span
+                            class="font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite text-lg tracking-tight block">Juan
+                            Fernando Pástor</span>
+                        <span class="text-xs text-zinc-500 dark:text-zinc-400 font-mono tracking-wider">PORTAFOLIO
+                            ACADÉMICO</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-6">
+                    <!-- Nav links -->
+                    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+                        <a href="#sobre-mi"
+                            class="hover:text-brand-redNeon dark:hover:text-brand-redNeon transition-colors">Sobre
+                            Mí</a>
+                        <a href="#proyectos"
+                            class="hover:text-brand-redNeon dark:hover:text-brand-redNeon transition-colors">Materias y
+                            Proyectos</a>
+                        <a href="https://github.com/juanferp912" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-1.5 hover:text-zinc-900 dark:hover:text-brand-pureWhite transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            GitHub
+                        </a>
+                    </nav>
+
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle"
+                        class="w-9 h-9 rounded-lg border border-zinc-200 dark:border-brand-darkBorder flex items-center justify-center bg-zinc-100 dark:bg-brand-darkCard hover:bg-zinc-200 dark:hover:bg-brand-darkBorder transition-colors text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-brand-pureWhite"
+                        aria-label="Cambiar tema">
+                        <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                        <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl w-full mx-auto px-4 md:px-8 py-12 flex-grow space-y-16">
+
+            <!-- Hero / Profile Section -->
+            <section id="sobre-mi" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+                <!-- Profile text & Info -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-500/20 bg-red-50 dark:bg-red-950/20 text-red-600 dark:text-brand-redNeon text-xs font-mono tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-red-500 dark:bg-brand-redNeon animate-pulse"></span>
+                        Ingeniería en Sistemas
+                    </div>
+
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-outfit font-extrabold tracking-tight text-zinc-900 dark:text-brand-pureWhite leading-tight">
+                        Construyendo el Futuro de la <span
+                            class="bg-gradient-to-r from-brand-redNeon via-rose-500 to-red-600 bg-clip-text text-transparent">Ingeniería
+                            de Sistemas</span>
+                    </h1>
+
+                    <p class="text-zinc-600 dark:text-zinc-400 text-base md:text-lg leading-relaxed max-w-2xl">
+                        Repositorio centralizado para documentar, estructurar y rastrear mi progreso técnico, proyectos
+                        académicos y aplicación de estándares de desarrollo en la <span
+                            class="text-zinc-800 dark:text-brand-pureWhite font-semibold">Universidad de Especialidades
+                            Espíritu Santo (UEES)</span>.
+                    </p>
+
+                    <!-- Profile Quick Stats Cards -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div
+                            class="project-card bg-white/60 dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-4 rounded-xl flex items-center gap-3">
+                            <div class="p-2.5 rounded-lg bg-red-500/10 text-brand-redNeon">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">2</span>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">Materias Activas</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card bg-white/60 dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-4 rounded-xl flex items-center gap-3">
+                            <div class="p-2.5 rounded-lg bg-red-500/10 text-brand-redNeon">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">2</span>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">Completados</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card bg-white/60 dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-4 rounded-xl flex items-center gap-3 col-span-2 sm:col-span-1">
+                            <div class="p-2.5 rounded-lg bg-red-500/10 text-brand-redNeon">
+                                <i data-lucide="code-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">1</span>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">En Desarrollo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Context details -->
+                <div class="lg:col-span-5">
+                    <div
+                        class="glass-panel bg-white/70 dark:bg-brand-darkCard p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-brand-darkBorder space-y-6 relative overflow-hidden shadow-sm dark:shadow-none glow-red">
+                        <div
+                            class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-brand-redNeon/5 rounded-full blur-xl">
+                        </div>
+
+                        <h2
+                            class="font-outfit font-bold text-xl text-zinc-900 dark:text-brand-pureWhite flex items-center gap-2">
+                            <i data-lucide="graduation-cap" class="text-red-650 dark:text-brand-redNeon"></i>
+                            Información Institucional
+                        </h2>
+
+                        <div class="divide-y divide-zinc-200 dark:divide-zinc-800 space-y-4 font-sans text-sm">
+                            <div class="flex justify-between items-center py-2 first:pt-0">
+                                <span class="text-zinc-500 dark:text-zinc-400">Estudiante</span>
+                                <span class="text-zinc-800 dark:text-brand-pureWhite font-semibold">Juan Fernando
+                                    Pástor</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-zinc-500 dark:text-zinc-400">Carrera</span>
+                                <span
+                                    class="text-zinc-800 dark:text-brand-pureWhite font-semibold text-right">Ingeniería
+                                    en Sistemas</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-zinc-500 dark:text-zinc-400">Institución</span>
+                                <span
+                                    class="text-zinc-800 dark:text-brand-pureWhite font-semibold text-right text-xs max-w-[200px]">Universidad
+                                    de Especialidades Espíritu Santo</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-zinc-500 dark:text-zinc-400">Periodo Lectivo</span>
+                                <span class="text-red-650 dark:text-brand-redNeon font-mono font-medium">2026-1</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 last:pb-0">
+                                <span class="text-zinc-500 dark:text-zinc-400">GitHub Usuario</span>
+                                <a href="https://github.com/juanferp912" target="_blank" rel="noopener noreferrer"
+                                    class="text-zinc-800 dark:text-brand-pureWhite hover:text-brand-redNeon font-mono font-medium flex items-center gap-1 transition-colors">
+                                    @juanferp912
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Grid Section -->
+            <section id="proyectos" class="space-y-8">
+                <!-- Section Title & Filters -->
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-zinc-200 dark:border-brand-darkBorder">
+                    <div class="space-y-2">
+                        <h2
+                            class="text-2xl md:text-3xl font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite tracking-tight">
+                            Índice de Materias y Proyectos
+                        </h2>
+                        <p class="text-zinc-500 dark:text-zinc-400 text-sm">
+                            Explora las materias organizadas y la documentación de proyectos adjuntos.
+                        </p>
+                    </div>
+
+                    <!-- Filters -->
+                    <div class="flex flex-wrap gap-2 text-xs font-medium">
+                        <button onclick="filterProjects('all')" id="filter-all"
+                            class="filter-btn px-4 py-2 rounded-lg border border-zinc-200 dark:border-brand-darkBorder bg-white dark:bg-brand-darkCard text-zinc-900 dark:text-brand-pureWhite hover:bg-zinc-150 dark:hover:bg-brand-darkBorder transition-colors shadow-sm dark:shadow-none">
+                            Todos
+                        </button>
+                        <button onclick="filterProjects('lenguajes')" id="filter-lenguajes"
+                            class="filter-btn px-4 py-2 rounded-lg border border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkCard transition-colors">
+                            Lenguajes de Programación
+                        </button>
+                        <button onclick="filterProjects('sistemas')" id="filter-sistemas"
+                            class="filter-btn px-4 py-2 rounded-lg border border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkCard transition-colors">
+                            Sistemas Distribuidos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projects Cards List -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+                    <!-- Proyecto 01 - PRO-BOT (Lenguajes de Programación) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6"
+                        data-materia="lenguajes" data-status="completed">
+                        <div class="space-y-4">
+                            <!-- Category & Badge -->
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Lenguajes
+                                    de Prog.</span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
+                                    Completado
+                                </span>
+                            </div>
+
+                            <!-- Title & Desc -->
+                            <div class="space-y-2">
+                                <h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">
+                                    Proyecto 01 - PRO-BOT
+                                </h3>
+                                <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">
+                                    Sistema Web de Consulta de Reglas e Inyección Dinámica de Datos basado en
+                                    Programación Lógica.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Prolog</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Laravel</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Docker</span>
+                            </div>
+                        </div>
+
+                        <!-- Actions Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                            <a href="./2026-1 - Lenguajes de Programación/proyecto-01/"
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkBorder hover:border-brand-redNeon/50 transition-colors text-xs font-semibold shadow-sm dark:shadow-none">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                Documentación
+                            </a>
+                            <a href="https://github.com/juanferp912/proyecto-prolog-laravel-Pastor" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white transition-colors text-xs font-semibold shadow-sm dark:shadow-none">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                Código Fuente
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 02 - Examen1 (Lenguajes de Programación) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6"
+                        data-materia="lenguajes" data-status="completed">
+                        <div class="space-y-4">
+                            <!-- Category & Badge -->
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Lenguajes
+                                    de Prog.</span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
+                                    Completado
+                                </span>
+                            </div>
+
+                            <!-- Title & Desc -->
+                            <div class="space-y-2">
+                                <h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">
+                                    Proyecto 02 - Examen1
+                                </h3>
+                                <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">
+                                    Sistema de Gestión (CRUD) y Motor de Predicciones del Mundial de Fútbol desarrollado
+                                    sobre lenguajes estructurados.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Web
+                                    CRUD</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Database</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Engine</span>
+                            </div>
+                        </div>
+
+                        <!-- Actions Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                            <a href="./2026-1 - Lenguajes de Programación/proyecto-02/"
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkBorder hover:border-brand-redNeon/50 transition-colors text-xs font-semibold shadow-sm dark:shadow-none">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                Documentación
+                            </a>
+                            <a href="https://github.com/juanferp912/proyectoLenguajes1parcial" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white transition-colors text-xs font-semibold shadow-sm dark:shadow-none">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                Código Fuente
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 01 - Examen1 (Sistemas Distribuidos) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6"
+                        data-materia="sistemas" data-status="pending">
+                        <div class="space-y-4">
+                            <!-- Category & Badge -->
+                            <div class="flex justify-between items-center">
+                                <span
+                                    class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Sistemas
+                                    Distribuidos</span>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                                    <span
+                                        class="w-1.5 h-1.5 rounded-full bg-amber-500 dark:bg-amber-400 animate-pulse"></span>
+                                    En Progreso
+                                </span>
+                            </div>
+
+                            <!-- Title & Desc -->
+                            <div class="space-y-2">
+                                <h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">
+                                    Proyecto 01 - Examen1
+                                </h3>
+                                <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">
+                                    Diseño e implementación de arquitectura distribuida para la transferencia y
+                                    consistencia de datos de examen.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Distributed</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">API</span>
+                                <span
+                                    class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Network</span>
+                            </div>
+                        </div>
+
+                        <!-- Actions Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                            <a href="./2026-1 - Sistemas Distribuidos/proyecto-01/"
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkBorder hover:border-brand-redNeon/50 transition-colors text-xs font-semibold shadow-sm dark:shadow-none">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                Documentación
+                            </a>
+                            <button disabled
+                                class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200/60 dark:border-brand-darkBorder bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-400 dark:text-zinc-600 cursor-not-allowed text-xs font-semibold">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                Por iniciar
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="glass-panel bg-white/70 dark:bg-brand-darkBg/70 border-t border-zinc-200 dark:border-brand-darkBorder px-6 py-8 mt-16 text-center">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2 justify-center">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-redNeon animate-ping"></span>
+                    <p class="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 font-mono">
+                        Este portafolio es un recurso vivo en constante actualización.
+                    </p>
+                </div>
+                <div class="text-xs text-zinc-500 dark:text-zinc-500 font-sans">
+                    &copy; 2026 Juan Fernando Pástor &bull; Universidad de Especialidades Espíritu Santo (UEES)
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Script section for Interactive controls -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check system preference
+        if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            html.classList.remove('dark');
+        } else {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Filter projects
+        function filterProjects(materia) {
+            const cards = document.querySelectorAll('#projects-grid > div');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Reset buttons style
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'dark:bg-brand-darkCard', 'text-zinc-900', 'dark:text-brand-pureWhite', 'border-zinc-200', 'dark:border-brand-darkBorder', 'shadow-sm', 'dark:shadow-none');
+                btn.classList.add('border-transparent', 'text-zinc-500', 'dark:text-zinc-400');
+            });
+
+            // Set active button style
+            const activeButton = document.getElementById(`filter-${materia}`);
+            if (activeButton) {
+                activeButton.classList.remove('border-transparent', 'text-zinc-500', 'dark:text-zinc-400');
+                activeButton.classList.add('bg-white', 'dark:bg-brand-darkCard', 'text-zinc-900', 'dark:text-brand-pureWhite', 'border-zinc-200', 'dark:border-brand-darkBorder', 'shadow-sm', 'dark:shadow-none');
+            }
+
+            // Show/Hide cards
+            cards.forEach(card => {
+                if (materia === 'all' || card.getAttribute('data-materia') === materia) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
