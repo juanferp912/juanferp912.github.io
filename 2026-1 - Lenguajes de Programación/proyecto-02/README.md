@@ -1,24 +1,33 @@
-# Sistema de Gestión de Torneos y Motor de Predicciones Deportivas (Mundial)
+# Proyecto Shark: videojuego 2D de supervivencia submarina
 
-Aplicación web interactiva que implementa un módulo administrativo completo (CRUD) para la gestión de selecciones nacionales y un sistema dinámico para el cálculo y procesamiento de predicciones de partidos en tiempo real.
+Videojuego 2D desarrollado en Unity donde el jugador controla un tiburon que se desplaza por escenarios submarinos, usa turbo, evita peligros, enfrenta enemigos y acumula puntos.
 
-## 📝 Descripción del Proyecto
-El objetivo de este proyecto es construir una plataforma interactiva donde los administradores puedan gestionar la información de un torneo global (países participantes, fixtures y resultados de partidos). Paralelamente, el sistema cuenta con un motor de predicciones que permite a los usuarios registrar sus pronósticos y calcula automáticamente los aciertos y puntajes basados en los resultados reales ingresados por el administrador.
+## Descripcion del proyecto
 
-## 🛠️ Arquitectura y Tecnologías
-* **Backend / Lógica del Sistema:** [Indica aquí el lenguaje/framework usado, ej: PHP/Laravel, Node.js, Python/Flask, etc.] encargado del enrutamiento, control de sesiones, validación de formularios y ejecución del algoritmo de puntuación de predicciones.
-* **Base de Datos:** [Indica aquí la base de datos, ej: MySQL, PostgreSQL, SQLite] para el almacenamiento relacional de selecciones, usuarios, partidos y registros de apuestas.
-* **Interfaz de Usuario:** [Indica aquí si usaste Bootstrap, Tailwind, CSS puro, etc.] estructurada para ofrecer un panel de control limpio para el administrador y una vista intuitiva de apuestas para el usuario final.
+El proyecto consiste en una experiencia jugable con menu principal y dos niveles de dificultad. El tiburon puede moverse dentro y fuera del agua, saltar, activar un turbo temporal, comer enemigos comestibles, recibir dano y obtener puntos mientras avanza por el nivel.
 
-## 🚀 Funcionalidades Clave
-1. **Módulo CRUD Administrativo:** Control total (Crear, Leer, Actualizar, Eliminar) sobre el catálogo de países participantes, estadios y fases del mundial.
-2. **Gestor de Fixture y Marcadores:** Panel dedicado para que el administrador registre partidos y actualice los resultados finales en caliente.
-3. **Motor de Predicciones Dinámicas:** Algoritmo que evalúa los pronósticos de los usuarios versus los resultados reales, asignando puntajes según el nivel de acierto (ej: acertar ganador, marcador exacto, etc.).
+## Arquitectura y tecnologias
 
-## 🎯 Logros Técnicos Demostrados
-* **Persistencia y Manipulación de Datos:** Diseño de un modelo de datos relacional con integridad referencial (llaves foráneas) para ligar usuarios, partidos y predicciones.
-* **Arquitectura de Software Basada en Roles:** Separación clara de privilegios entre el rol de Administrador (gestión de datos globales) y el rol de Usuario (ingreso de predicciones personales).
-* **Validación y Seguridad:** Sanitización de entradas del lado del servidor para evitar registros corruptos o inconsistencias en los marcadores de los partidos.
+* **Motor y lenguaje:** Unity 6, version `6000.0.79f1`, con C#.
+* **Renderizado:** Universal Render Pipeline (URP) 2D.
+* **Entrada e interfaz:** Unity Input System, Unity UI y TextMesh Pro.
+* **Diseno del juego:** escenas, prefabs, animaciones, audio, spawners y scripts separados por responsabilidades.
+
+## Funcionalidades clave
+
+1. **Movimiento acuatico y aereo:** control horizontal/vertical en el agua y fisica con gravedad al salir a la superficie.
+2. **Turbo:** aceleracion temporal con duracion y recarga visibles en la interfaz.
+3. **Supervivencia y puntuacion:** sistema de vida, dano, enemigos, objetos y vidas extra otorgadas por puntos.
+4. **Progresion jugable:** menu principal y niveles facil/dificil con enemigos y obstaculos como orcas, medusas, minas, arpones y buzos.
+
+## Logros tecnicos demostrados
+
+* **Programacion orientada a componentes:** scripts de C# coordinados mediante componentes de Unity, eventos y referencias serializadas.
+* **Diseno modular:** controladores independientes para jugador, salud, puntuacion, audio, camara, enemigos, spawners y UI.
+* **Integracion audiovisual:** animaciones del tiburon, efectos de particulas, musica y sonidos para acciones, dano, salto y derrota.
 
 ---
-🔗 *Nota: Este proyecto forma parte del portafolio académico para la materia de Lenguajes de Programación (Periodo 2026-1).*
+
+Repositorio oficial: [ProyectoSharkJFP_JAM](https://github.com/juanferp912/ProyectoSharkJFP_JAM)
+
+*Nota: este proyecto corresponde al Proyecto 02 de la materia de Lenguajes de Programacion (Periodo 2026-1).*
