@@ -23,6 +23,16 @@ Repositorio centralizado para documentar, estructurar y rastrear mi progreso tec
 #### [2026-1 - Sistemas Distribuidos](./2026-1%20-%20Sistemas%20Distribuidos/)
 
 * **[Proyecto 01 - La Boloneria](./2026-1%20-%20Sistemas%20Distribuidos/proyecto-01/):** Sistema de gestion automatizado con n8n, PostgreSQL, Mistral AI y Docker - *Completado*
+* **[Proyecto 02 - ARGUS](./2026-1%20-%20Sistemas%20Distribuidos/proyecto-02/):** Sistema distribuido de monitoreo con camaras, agentes Edge, API y MongoDB - *Completado*
+
+#### [2026-1 - Analisis de Algoritmos](./2026-1%20-%20Analisis%20de%20Algoritmos/)
+
+* **[Proyecto 01 - Propagacion de Malware](./2026-1%20-%20Analisis%20de%20Algoritmos/proyecto-01/):** Comparacion de Dijkstra y Bellman-Ford sobre grafos ponderados - *Completado*
+
+#### [2026-1 - Estructura de Datos](./2026-1%20-%20Estructura%20de%20Datos/)
+
+* **[Proyecto 01 - Gestor academico](./2026-1%20-%20Estructura%20de%20Datos/proyecto-01/):** Sistema Java con listas, pilas, colas y calculos de calificaciones - *Completado*
+* **[Proyecto 02 - Agenda de contactos](./2026-1%20-%20Estructura%20de%20Datos/proyecto-02/):** Agenda Java con busqueda por prefijo, heap y ordenamiento - *Completado*
 
 ---
 

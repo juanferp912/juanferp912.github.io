@@ -216,7 +216,7 @@
                             </div>
                             <div>
                                 <span
-                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">2</span>
+                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">4</span>
                                 <span class="text-xs text-zinc-500 dark:text-zinc-400">Materias Activas</span>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                             </div>
                             <div>
                                 <span
-                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">3</span>
+                                    class="block text-2xl font-bold font-outfit text-zinc-900 dark:text-brand-pureWhite leading-tight">8</span>
                                 <span class="text-xs text-zinc-500 dark:text-zinc-400">Completados</span>
                             </div>
                         </div>
@@ -324,6 +324,14 @@
                         <button onclick="filterProjects('sistemas')" id="filter-sistemas"
                             class="filter-btn px-4 py-2 rounded-lg border border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkCard transition-colors">
                             Sistemas Distribuidos
+                        </button>
+                        <button onclick="filterProjects('algoritmos')" id="filter-algoritmos"
+                            class="filter-btn px-4 py-2 rounded-lg border border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkCard transition-colors">
+                            Analisis de Algoritmos
+                        </button>
+                        <button onclick="filterProjects('estructura')" id="filter-estructura"
+                            class="filter-btn px-4 py-2 rounded-lg border border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-brand-pureWhite hover:bg-zinc-100 dark:hover:bg-brand-darkCard transition-colors">
+                            Estructura de Datos
                         </button>
                     </div>
                 </div>
@@ -532,6 +540,46 @@
                                 Código Fuente
                             </a>
                         </div>
+                    </div>
+
+                    <!-- Proyecto 02 - ARGUS (Sistemas Distribuidos) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6"
+                        data-materia="sistemas" data-status="completed">
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Sistemas Distribuidos</span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>Completado</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">Proyecto 02 - ARGUS</h3>
+                                <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">Sistema distribuido de monitoreo con camaras, agentes Edge, API central, MongoDB, Docker Compose y Kubernetes.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-2"><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">FastAPI</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">MongoDB</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Kubernetes</span></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800"><a href="./2026-1 - Sistemas Distribuidos/proyecto-02/" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 text-xs font-semibold"><i data-lucide="file-text" class="w-4 h-4"></i>Documentación</a><a href="https://github.com/GustavoMejia-UEES/proyecto-sd-p2" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white text-xs font-semibold"><i data-lucide="github" class="w-4 h-4"></i>Código Fuente</a></div>
+                    </div>
+
+                    <!-- Proyecto 01 - Propagación de Malware (Análisis de Algoritmos) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6"
+                        data-materia="algoritmos" data-status="completed">
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center"><span class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Análisis de Algoritmos</span><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>Completado</span></div>
+                            <div class="space-y-2"><h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">Proyecto 01 - Propagación de Malware</h3><p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">Comparación de Dijkstra y Bellman-Ford para encontrar rutas de propagación con mayor probabilidad en grafos ponderados.</p></div>
+                            <div class="flex flex-wrap gap-1.5 pt-2"><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Python</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Dijkstra</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Bellman-Ford</span></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800"><a href="./2026-1 - Analisis de Algoritmos/proyecto-01/" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 text-xs font-semibold"><i data-lucide="file-text" class="w-4 h-4"></i>Documentación</a><a href="https://github.com/ueesaalg/aalg_act2_2p_ord1_26_grupo3" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white text-xs font-semibold"><i data-lucide="github" class="w-4 h-4"></i>Código Fuente</a></div>
+                    </div>
+
+                    <!-- Proyecto 01 - Gestor Académico (Estructura de Datos) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6" data-materia="estructura" data-status="completed">
+                        <div class="space-y-4"><div class="flex justify-between items-center"><span class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Estructura de Datos</span><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>Completado</span></div><div class="space-y-2"><h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">Proyecto 01 - Gestor Académico</h3><p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">Sistema Java para gestionar cursos, estudiantes, actividades, entregas, cálculos y reportes de dos semestres.</p></div><div class="flex flex-wrap gap-1.5 pt-2"><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Java</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Listas</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Pilas y Colas</span></div></div>
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800"><a href="./2026-1 - Estructura de Datos/proyecto-01/" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 text-xs font-semibold"><i data-lucide="file-text" class="w-4 h-4"></i>Documentación</a><a href="https://github.com/juanferp912/ProyectoEstructura" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white text-xs font-semibold"><i data-lucide="github" class="w-4 h-4"></i>Código Fuente</a></div>
+                    </div>
+
+                    <!-- Proyecto 02 - Agenda de Contactos (Estructura de Datos) -->
+                    <div class="project-card bg-white dark:bg-brand-darkCard border border-zinc-200 dark:border-brand-darkBorder p-6 rounded-2xl flex flex-col justify-between space-y-6" data-materia="estructura" data-status="completed">
+                        <div class="space-y-4"><div class="flex justify-between items-center"><span class="text-xs font-mono text-zinc-500 dark:text-zinc-550 uppercase tracking-widest">Estructura de Datos</span><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>Completado</span></div><div class="space-y-2"><h3 class="text-lg font-outfit font-bold text-zinc-900 dark:text-brand-pureWhite">Proyecto 02 - Agenda de Contactos</h3><p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed min-h-[72px]">Agenda Java con búsqueda por prefijo, heap, carga y exportación de contactos y ordenamiento por frecuencia.</p></div><div class="flex flex-wrap gap-1.5 pt-2"><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Java</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Heap</span><span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Prefijos</span></div></div>
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800"><a href="./2026-1 - Estructura de Datos/proyecto-02/" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-zinc-200 dark:border-brand-darkBorder bg-zinc-50 dark:bg-brand-darkCard text-zinc-700 dark:text-zinc-300 text-xs font-semibold"><i data-lucide="file-text" class="w-4 h-4"></i>Documentación</a><a href="https://github.com/juanferp912/ProyEDDJfAj" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-redNeon hover:bg-brand-redHover text-white text-xs font-semibold"><i data-lucide="github" class="w-4 h-4"></i>Código Fuente</a></div>
                     </div>
 
                 </div>
