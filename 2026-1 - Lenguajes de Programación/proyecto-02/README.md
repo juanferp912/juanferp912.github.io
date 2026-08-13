@@ -1,33 +1,29 @@
-# Proyecto Shark: videojuego 2D de supervivencia submarina
+# Sistema de Gestion de Torneos y Motor de Predicciones Deportivas (Mundial)
 
-Videojuego 2D desarrollado en Unity donde el jugador controla un tiburon que se desplaza por escenarios submarinos, usa turbo, evita peligros, enfrenta enemigos y acumula puntos.
+Aplicacion web interactiva que implementa un modulo administrativo CRUD para la gestion de selecciones nacionales y partidos del mundial, junto con un sistema de predicciones deportivas.
 
 ## Descripcion del proyecto
 
-El proyecto consiste en una experiencia jugable con menu principal y dos niveles de dificultad. El tiburon puede moverse dentro y fuera del agua, saltar, activar un turbo temporal, comer enemigos comestibles, recibir dano y obtener puntos mientras avanza por el nivel.
+El objetivo es construir una plataforma donde los administradores gestionen la informacion de un torneo global: paises participantes, partidos, resultados y datos relacionados. Los usuarios pueden registrar sus pronosticos y consultar sus aciertos y puntajes.
 
 ## Arquitectura y tecnologias
 
-* **Motor y lenguaje:** Unity 6, version `6000.0.79f1`, con C#.
-* **Renderizado:** Universal Render Pipeline (URP) 2D.
-* **Entrada e interfaz:** Unity Input System, Unity UI y TextMesh Pro.
-* **Diseno del juego:** escenas, prefabs, animaciones, audio, spawners y scripts separados por responsabilidades.
+* **Backend y logica:** aplicacion web estructurada para gestionar rutas, sesiones, validaciones y el algoritmo de puntuacion.
+* **Persistencia:** base de datos relacional para almacenar selecciones, usuarios, partidos y predicciones.
+* **Interfaz:** panel administrativo y vista de usuario para gestionar informacion y registrar pronosticos.
 
 ## Funcionalidades clave
 
-1. **Movimiento acuatico y aereo:** control horizontal/vertical en el agua y fisica con gravedad al salir a la superficie.
-2. **Turbo:** aceleracion temporal con duracion y recarga visibles en la interfaz.
-3. **Supervivencia y puntuacion:** sistema de vida, dano, enemigos, objetos y vidas extra otorgadas por puntos.
-4. **Progresion jugable:** menu principal y niveles facil/dificil con enemigos y obstaculos como orcas, medusas, minas, arpones y buzos.
+1. **Modulo CRUD administrativo:** crear, consultar, actualizar y eliminar informacion del torneo.
+2. **Gestion de fixtures y marcadores:** registro de partidos y actualizacion de resultados.
+3. **Motor de predicciones:** comparacion entre pronosticos y resultados reales para asignar puntajes.
 
 ## Logros tecnicos demostrados
 
-* **Programacion orientada a componentes:** scripts de C# coordinados mediante componentes de Unity, eventos y referencias serializadas.
-* **Diseno modular:** controladores independientes para jugador, salud, puntuacion, audio, camara, enemigos, spawners y UI.
-* **Integracion audiovisual:** animaciones del tiburon, efectos de particulas, musica y sonidos para acciones, dano, salto y derrota.
+* Persistencia y manipulacion de datos con un modelo relacional.
+* Separacion de privilegios entre administrador y usuario.
+* Validacion de entradas para mantener la consistencia de los datos.
 
 ---
 
-Repositorio oficial: [ProyectoSharkJFP_JAM](https://github.com/juanferp912/ProyectoSharkJFP_JAM)
-
-*Nota: este proyecto corresponde al Proyecto 02 de la materia de Lenguajes de Programacion (Periodo 2026-1).*
+*Nota: este proyecto forma parte del portafolio academico para la materia de Lenguajes de Programacion (Periodo 2026-1).*

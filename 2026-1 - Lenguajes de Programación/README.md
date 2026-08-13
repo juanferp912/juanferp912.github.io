@@ -12,10 +12,16 @@ Indice de proyectos de la materia de Lenguajes de Programacion correspondientes 
 * **Documentacion tecnica:** [Ver detalles del proyecto](./proyecto-01/)
 * **Repositorio oficial externo:** [juanferp912/proyecto-prolog-laravel-Pastor](https://github.com/juanferp912/proyecto-prolog-laravel-Pastor)
 
-### Proyecto 02 - Shark
+### Proyecto 02 - Examen1
+
+* **Descripcion:** Aplicacion interactiva de gestion de datos (CRUD) para selecciones nacionales y partidos del mundial, con un motor de predicciones deportivas.
+* **Documentacion tecnica:** [Ver detalles del proyecto](./proyecto-02/)
+* **Repositorio oficial externo:** [juanferp912/proyectoLenguajes1parcial](https://github.com/juanferp912/proyectoLenguajes1parcial)
+
+### Proyecto 03 - Shark
 
 * **Descripcion:** Videojuego 2D de supervivencia submarina desarrollado con Unity y C#. Incluye movimiento acuatico y aereo, turbo, enemigos, obstaculos, vidas, niveles de dificultad y sistema de puntuacion.
-* **Documentacion tecnica:** [Ver detalles del proyecto](./proyecto-02/)
+* **Documentacion tecnica:** [Ver detalles del proyecto](./proyecto-03/)
 * **Repositorio oficial externo:** [juanferp912/ProyectoSharkJFP_JAM](https://github.com/juanferp912/ProyectoSharkJFP_JAM)
 
 ---
